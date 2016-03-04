@@ -5,6 +5,8 @@ class UsersController < ApplicationController
   end
 
   def show
+
+    @bio = @user.bio
   end
 
   def edit
@@ -45,5 +47,6 @@ class UsersController < ApplicationController
 
   def user
     @user = User.find(params[:id])
+
   end
 end
