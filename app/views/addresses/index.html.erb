@@ -1,2 +1,8 @@
-<h1>Addresses#index</h1>
-<p>Find me in app/views/addresses/index.html.erb</p>
+<h1>Address for: <%= @user.name %></h1>
+
+<% if @user.address %>
+  <h3><%= @user.address %></h3>
+  <%= link_to 'Delete' %>
+<% else %>
+  <h1>You do not have an address. <%= link_to 'Add One', new_user_address_path(@user, @address) %></h1>
+<% end %>
