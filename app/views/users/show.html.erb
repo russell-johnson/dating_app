@@ -6,7 +6,9 @@
 <h3>Phone: <%= @user.phone %></h3>
 <h3>Race: <%= @user.race %></h3>
 <br />
-
+<% @user.interests.each do |i| %>
+  <%= i.name %>
+<% end %>
 <br />
 
 <%= link_to 'Edit', edit_user_path %>

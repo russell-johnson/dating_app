@@ -1,5 +1,5 @@
 <h1>Interests for <%= @user.name %></h1>
-<% @user.interest.each do |interest| %>
+<% @user.interests.each do |interest| %>
   <p><%= interest.name %></p>
   <%= link_to 'Edit', edit_user_interest_path(@user, interest) %>
   <%= link_to 'Delete', user_interest_path(@user, interest), method: :delete, data: {confirm: 'Are you sure?'} %>
