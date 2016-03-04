@@ -5,7 +5,6 @@ class UsersController < ApplicationController
   end
 
   def show
-
     @bio = @user.bio
   end
 
