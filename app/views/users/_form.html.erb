@@ -1,0 +1,23 @@
+<%= form_for @user do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true %>
+
+  <%= f.label :age %>
+  <%= f.text_field :age %>
+
+  <%= f.label :gender %>
+  <%= f.text_field :gender, required: true %>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+
+  <%= f.label :phone %>
+  <%= f.text_field :phone %>
+
+  <%= f.label :race %>
+  <%= f.text_field :race %>
+
+  <%= f.submit %>
+
+  <% end %>

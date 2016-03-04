@@ -1,0 +1,11 @@
+<h1><%= @user.name %></h1>
+
+<h3>Age: <%= @user.age %></h3>
+<h3>Gender: <%= @user.gender %></h3>
+<h3>Email: <%= @user.email %></h3>
+<h3>Phone: <%= @user.phone %></h3>
+<h3>Race: <%= @user.race %></h3>
+
+<br />
+<%= link_to 'Edit', edit_user_path %>
+<%= link_to 'Delete Profile', user_path, method: :delete, data: {confirm: 'Are you sure?'} %>
