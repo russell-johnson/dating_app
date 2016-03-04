@@ -1,12 +1,13 @@
 class BiosController < ApplicationController
   before_action :user
   before_action :bio, only: [:show, :edit, :update, :destroy]
+
   def new
     @bio = Bio.new
   end
 
   def create
-    @bio = @user.bios.new(bio_params)
+    @bio = @user.bio.new(bio_params)
     redirect_to user_path(@user)
     if @bio.save
       redirect_to user_path(@user)
@@ -41,7 +42,7 @@ class BiosController < ApplicationController
   end
 
   def bio
-    @bio = @user.bio.find(params[:id])
+    @bio = @user.bio
   end
 
   def bio_params
