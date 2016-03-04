@@ -1,14 +1,17 @@
 class BiosController < ApplicationController
   before_action :user
-  before_action :bio, only: [:show, :edit, :update, :destroy]
+  before_action :bio, only: [:index, :show, :edit, :update, :destroy]
+
+  def index
+  end
 
   def new
     @bio = Bio.new
   end
 
   def create
-    @bio = @user.bio.new(bio_params)
-    redirect_to user_path(@user)
+    @bio = Bio.new(bio_params)
+    @bio.user_id = @user.id
     if @bio.save
       redirect_to user_path(@user)
     else
@@ -42,7 +45,7 @@ class BiosController < ApplicationController
   end
 
   def bio
-    @bio = @user.bio
+    @bio = Bio.find(params[:id])
   end
 
   def bio_params
