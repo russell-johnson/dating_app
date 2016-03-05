@@ -27,11 +27,13 @@
     <% end %>
     <br />
     <h2 class='user-info-label'>Address:</h2>
-    <% binding.pry %>
-      <% @user.addresses do |address| %>
+      <% @user.addresses.each do |address| %>
       <%= address.street %>
+      <br />
       <%= address.city %>
+      <br />
       <%= address.state %>
+      <br />
       <%= address.zip %>
       <% end %>
     <div class='edit-user-links'>
