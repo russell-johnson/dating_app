@@ -111,6 +111,16 @@ a:hover {
   margin: 20px 0 20px 0;
 }
 
+.find-someone {
+  text-align: center;
+  margin: 40px 0 80px 0;
+  font-size: 80px;
+}
+
+.find-someone span {
+  color: #ff907a;
+}
+
 .title {
   font-size: 30px;
   margin: 20px 0 20px 0;
