@@ -100,6 +100,10 @@ a:hover {
   margin-top: 40px;
 }
 
+.margin-right {
+  margin-right: 30px;
+}
+
 .center-title {
   color: #CFE0CD;
   text-align: center;
@@ -135,6 +139,15 @@ Navbar
 .logo {
   font-size: 24px;
   display: inline-block;
-  margin: 4px 40px 0 5px;
+  margin: 4px 5px 0 5px;
   font-weight: bold;
+}
+
+.logo-small {
+  display: inline-block;
+}
+
+.love {
+  display: inline-block;
+  color: #ff907a;
 }
