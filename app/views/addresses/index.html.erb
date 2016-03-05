@@ -1,2 +1,13 @@
-<h1>Addresses#index</h1>
-<p>Find me in app/views/addresses/index.html.erb</p>
+<h1>Address for: <%= @user.name %></h1>
+<% if @user.addresses.any? %>
+  <% @user.addresses.each do |address| %>
+    <%= address.street %>
+    <%= address.city %>
+    <%= address.state %>
+    <%= link_to "Edit", edit_user_address_path(@user, address) %>
+    <%= link_to "Delete", user_address_path(@user, address), method: :delete %>
+    <hr/>
+  <% end %>
+<% else %>
+  <h3>No current address! <%= link_to 'Add One', new_user_address_path(@user) %></h3>
+<% end %>
