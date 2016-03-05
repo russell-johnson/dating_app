@@ -11,6 +11,15 @@
   <%= i.name %>
 <% end %>
 <br />
+<% if @user.bios.any? %>
+  <% @user.bios.each do |bio| %>
+    <h3>Bio: </h3>
+    <%= bio.description %>
+    <% end %>
+<% else %>
+  <%= link_to 'Add Bio', new_user_bio_path(@user) %>
+<% end %>
+<br />
 
 <%= link_to 'Edit', edit_user_path %>
 <%= link_to 'Delete Profile', user_path, method: :delete, data: {confirm: 'Are you sure?'} %>
