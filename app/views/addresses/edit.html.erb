@@ -1,2 +1,6 @@
-<h1>Edit Address for: <%= @user.name %></h1>
+<h1 class='center-title'>Edit <%= @user.name %>'s Address</h1>
 <%= render(partial: "form") %>
+<br />
+<div class='edit-user-links'>
+<%= link_to 'Profile', user_path(@user) %>
+</div>

@@ -2,16 +2,11 @@
 <% if @bio %>
 <%= @bio.description %>
 <br />
-
-<%= link_to 'Edit', edit_user_bio_path %>
-<%= link_to 'Delete', user_bio_path, method: :delete, data: {confirm: 'Are you sure?'} %>
-
-<%= link_to 'Edit', edit_user_bio_path(@user, @bio) %>
-
+<div class='edit-user-links'>
+  <%= link_to 'Edit', edit_user_bio_path(@user, @bio), class: 'edit-link' %>
+  <%= link_to 'Delete', user_bio_path(@user, @bio), method: :delete, data: {confirm: 'Are you sure?'}, class: 'delete-link' %>
+  <%= link_to 'Profile', user_path(@user) %>
+</div>
 <% else %>
-<<<<<<< HEAD
 <%= link_to 'Add Bio', new_user_bio_path(@user), class: 'edit-link' %>
-=======
-<%= link_to 'Add Bio', new_user_bio_path(@user) %>
->>>>>>> 2dec6bf5f543c8229d44ac8adb2ca5f1a5c2a54c
 <% end %>

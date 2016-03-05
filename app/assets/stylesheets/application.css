@@ -89,7 +89,7 @@ a:hover {
 
 .delete-link {
   color: black;
-  background-color: #F8512F;
+  background-color: #ff907a;
 }
 
 .margin-bottom {
@@ -123,14 +123,18 @@ Navbar
 
 .navbar-link {
   display: inline-block;
-  margin: 0 0 0 0;
+  margin: 0;
   background-color: transparent;
   color: white;
 }
 
+.navbar-link:hover {
+  color: #d5ff75;
+}
+
 .logo {
-  font-size: 22px;
+  font-size: 24px;
   display: inline-block;
-  margin: 2px 25px 0 5px;
+  margin: 2px 40px 0 5px;
   font-weight: bold;
 }
