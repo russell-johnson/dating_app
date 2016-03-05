@@ -1,7 +1,6 @@
 class InterestsController < ApplicationController
-
   before_action :user
-  before_action :interest, only: [:edit, :update, :destroy]
+  before_action :interest, only: [:show, :edit, :update, :destroy]
 
   def index
     @interests = @user.interests.all

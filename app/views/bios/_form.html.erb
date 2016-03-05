@@ -1,6 +1,6 @@
 <%= form_for [@user, @bio] do |f| %>
 
-<%= f.label :bio %>:
+<%= f.label :bio, class: 'name-label' %>:
 <br />
 <%= f.text_area :description %>
 <br />

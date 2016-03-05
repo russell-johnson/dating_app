@@ -1,8 +1,11 @@
-<%= form_for [@user, @interest] do |f| %>
-
-  <%= f.label :name %>
-  <%= f.text_field :name, required: true %>
-
-  <%= f.submit %>
-
-  <% end %>
+<div class='container'>
+  <div class='interest-form'>
+    <%= form_for [@user, @interest] do |f| %>
+      <%= f.label :name, class: 'name-label'%>
+      <br />
+      <%= f.text_field :name, required: true %>
+      <br />
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>

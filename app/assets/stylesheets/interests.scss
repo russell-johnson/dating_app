@@ -1,3 +1,26 @@
 // Place all the styles related to the interests controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.interest-edit{
+  background-color: transparent;
+  font-size: 10px;
+  color: #C8F463;
+  padding: 0;
+}
+
+.interest-delete {
+  background-color: transparent;
+  font-size: 10px;
+  color: #FF6B6B;
+  padding: 0;
+}
+
+.interest-name {
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.name-label {
+  font-size: 22px;
+}

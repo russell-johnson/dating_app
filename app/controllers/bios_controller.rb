@@ -34,8 +34,7 @@ class BiosController < ApplicationController
   end
 
   def destroy
-    @bio.destroy
-    redirect_to user_path(@user)
+
   end
 
   private

@@ -1,7 +1,15 @@
-<h1>All Users</h1>
-<% @users.each do |user| %>
-  <%= link_to user.name, user_path(user) %>
-<% end %>
-
-<br />
-<%= link_to 'New User', new_user_path %>
+<div class='container'>
+  <h1 class='center-title'>All Users</h1>
+  <% @users.each do |user| %>
+    <div class='list-user'>
+      <%= link_to user.name, user_path(user), class: 'user-name' %>
+      <br />
+      <div class='margin-bottom'></div>
+      <p class='user-detail margin-top'>Age: <%= user.age %></p>
+      <p class='user-detail'><%= user.gender %></p>
+      <p class='user-detail'>E: <%= user.email %></p>
+      <p class='user-detail'>P: <%= user.phone %></p>
+      <p class='user-detail'><%= user.race %></p>
+    </div>
+  <% end %>
+</div>

@@ -1,3 +1,62 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.show-user {
+  color: #F8F9E9;
+}
+
+.user-info {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.user-info-label {
+  color: #CFE0CD;
+  font-style: italic;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.show-user a {
+  font-size: 20px;
+
+}
+
+.user-link-div {
+  margin: 0 0 20px 0;
+}
+
+.edit-user-links {
+  margin: 80px 0 20px 0;
+}
+
+.list-user {
+  display: inline-block;
+  height: 200px;
+  width: 300px;
+  background-color: #F8F9E9;
+  border-radius: 10px;
+  margin: 5px;
+
+}
+
+.user-name {
+  background-color: transparent;
+  padding: 0;
+  font-size: 24px;
+  float: left;
+  position: relative;
+  left: 30%;
+
+}
+
+.user-detail {
+  margin: 10px 0 5px 5px;
+  color: #141414;
+  font-size: 18px;
+}
+
+.form-label {
+  font-size: 22px;
+}
