@@ -1,4 +1,4 @@
-<h1 class='center-title'>Interests for <%= @user.name %></h1>
+<h1 class='center-title'><%= @user.name %>'s Interests</h1>
 <% @user.interests.each do |interest| %>
   <p class='interest-name'><%= interest.name %></p>
   <%= link_to 'Edit', edit_user_interest_path(@user, interest), class: 'interest-edit'%>
