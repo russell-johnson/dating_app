@@ -22,12 +22,18 @@
     <% end %>
     <br />
     <h3 class='user-info-label'>Interests: </h3>
-    <% @user.interests.each do |i| %>
+      <% @user.interests.each do |i| %>
       <p class='interests-content'><%= i.name %></p>
     <% end %>
     <br />
     <h2 class='user-info-label'>Address:</h2>
-
+    <% binding.pry %>
+      <% @user.addresses do |address| %>
+      <%= address.street %>
+      <%= address.city %>
+      <%= address.state %>
+      <%= address.zip %>
+      <% end %>
     <div class='edit-user-links'>
       <%= link_to 'Edit', edit_user_path, class: 'edit-link' %>
       <%= link_to 'Delete Profile', user_path, method: :delete, data: {confirm: 'Are you sure?'}, class: 'delete-link' %>

@@ -1,15 +1,19 @@
 <%= form_for [@user, @address] do |f| %>
-  <%= f.label :street %>
+  <%= f.label :street, class: 'form-label' %>
+  <br />
   <%= f.text_field :street %>
-  <br/>
-  <%= f.label :city %>
+  <br />
+  <%= f.label :city, class: 'form-label' %>
+  <br />
   <%= f.text_field :city %>
-  <br/>
-  <%= f.label :state %>
+  <br />
+  <%= f.label :state, class: 'form-label' %>
+  <br />
   <%= f.text_field :state %>
-  <br/>
-  <%= f.label :zip %>
+  <br />
+  <%= f.label :zip, class: 'form-label' %>
+  <br />
   <%= f.text_field :zip %>
-  <br/>
+  <br />
   <%= f.submit %>
 <% end %>

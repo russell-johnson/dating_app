@@ -1,5 +1,5 @@
 <div class='container'>
-  <h1 class='center-title'>All Users</h1>
+  <h1 class='center-title'>All Profiles</h1>
   <% @users.each do |user| %>
     <div class='list-user'>
       <%= link_to user.name, user_path(user), class: 'user-name' %>

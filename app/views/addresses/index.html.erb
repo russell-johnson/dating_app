@@ -1,13 +1,22 @@
-<h1>Address for: <%= @user.name %></h1>
+<h1 class='center-title'><%= @user.name %>'s Address</h1>
 <% if @user.addresses.any? %>
   <% @user.addresses.each do |address| %>
-    <%= address.street %>
-    <%= address.city %>
-    <%= address.state %>
-    <%= link_to "Edit", edit_user_address_path(@user, address) %>
-    <%= link_to "Delete", user_address_path(@user, address), method: :delete %>
-    <hr/>
+    <p class='user-address-info'><%= address.street %></p>
+    <br />
+    <p class='user-address-info'><%= address.city %></p>
+    <br />
+    <p class='user-address-info'><%= address.state %></p>
+    <br />
+    <p class='user-address-info'><%= address.zip %></p>
+    <br />
+    <div class='edit-user-links'>
+      <%= link_to "Edit", edit_user_address_path(@user, address), class: 'edit-link' %>
+      <%= link_to "Delete", user_address_path(@user, address), method: :delete, data: {confirm: 'Are you sure?'}, class: 'delete-link' %>
+      <%= link_to 'Profile', user_path(@user) %>
+    </div>
   <% end %>
 <% else %>
-  <h3>No current address! <%= link_to 'Add One', new_user_address_path(@user) %></h3>
+  <h3>No current address!</h3>
+  <br />
+  <%= link_to 'Add Address', new_user_address_path(@user), class: 'edit-link' %>
 <% end %>

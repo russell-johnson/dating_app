@@ -1,6 +1,6 @@
 class AddressesController < ApplicationController
   before_action :user
-  # before_action :address, except: [:create, :new, :destroy, :edit, ]
+  before_action :address, except: [:create, :new, :index]
   def index
     @addresses = Address.where(user_id: @user.id)
   end
