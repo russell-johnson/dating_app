@@ -24,5 +24,8 @@
   <br />
   <%= f.select :gender, ['Male', 'Female'], required: true %>
   <br />
+  <label>Profile Picture</label>
+  <%= f.file_field :avatar %>
+  <br />
   <%= f.submit %>
 <% end %>

@@ -64,7 +64,12 @@ table {
  Custom Style
  ===========================*/
 
-body {
+ body {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(http://www.thedailyindia.in/wp-content/uploads/2015/09/love-holding-hands-hd-wallpapers.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-color: black;
   color: white;
 }
@@ -79,7 +84,7 @@ a {
 }
 
 a:hover {
-  font-weight: bold;
+  
 }
 
 .edit-link {

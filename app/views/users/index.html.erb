@@ -5,11 +5,12 @@
       <%= link_to user.name, user_path(user), class: 'user-name' %>
       <br />
       <div class='margin-bottom'></div>
-      <p class='user-detail margin-top'>Age: <%= user.age %></p>
+      <%= image_tag user.avatar_url(:tiny_thumb), class: 'user-index-image' %>
+      <p class='user-detail'>Age: <%= user.age %></p>
       <p class='user-detail'><%= user.gender %></p>
-      <p class='user-detail'>E: <%= user.email %></p>
-      <p class='user-detail'>P: <%= user.phone %></p>
       <p class='user-detail'><%= user.race %></p>
+      <p class='user-detail'>P: <%= user.phone %></p>
+      <p class='user-detail'>E: <%= user.email %></p>
     </div>
   <% end %>
 </div>

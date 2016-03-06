@@ -1,6 +1,8 @@
 <div class='container'>
-  <div class='show-user'>
+  <div class='show-user-title'>
     <h1 class='center-title'><%= @user.name %>'s Profile</h1>
+  </div>
+  <div class="show-user">
     <div class='user-link-div'>
       <%= link_to 'Address', user_addresses_path(@user), class: 'user-link' %>
       <%= link_to 'Interests', user_interests_path(@user), class: 'user-link' %>
@@ -40,5 +42,6 @@
       <%= link_to 'Edit', edit_user_path, class: 'edit-link' %>
       <%= link_to 'Delete Profile', user_path, method: :delete, data: {confirm: 'Are you sure?'}, class: 'delete-link' %>
     </div>
+    <%= image_tag @user.avatar_url(:thumb), class: 'user-show-image' %>
   </div>
 </div>
