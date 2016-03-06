@@ -41,6 +41,7 @@
     <div class='edit-user-links'>
       <%= link_to 'Edit', edit_user_path, class: 'edit-link' %>
       <%= link_to 'Delete Profile', user_path, method: :delete, data: {confirm: 'Are you sure?'}, class: 'delete-link' %>
+      <%= link_to "View Matches" %>
     </div>
     <%= image_tag @user.avatar_url(:thumb), class: 'user-show-image' %>
   </div>
