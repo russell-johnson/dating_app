@@ -4,12 +4,12 @@
     <h3 class='logo-small'>To</h3>
     <h3 class='love'>Love</h3>
     <h3 class='logo-small margin-right'>You</h3>
-    <%= link_to 'Sign Up', signup_path %>
-    <%= link_to 'Login', login_path %>
-
     <% if logged_in? %>
       <%= link_to 'My Profile', user_path(current_user) %>
       <%= link_to 'Logout', logout_path(current_user)%>
+    <% else %>
+      <%= link_to 'Sign Up', signup_path %>
+      <%= link_to 'Login', login_path %>
     <% end %>
 
 
