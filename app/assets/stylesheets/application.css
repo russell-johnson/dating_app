@@ -179,17 +179,17 @@ Footer
 
 .footer {
   background-color: #303030;
-  padding-bottom: 10px;
+  padding-bottom: 4px;
 }
 
 .footer-copy {
   display: inline-block;
-  margin: 7px 0 0 20px;
+  margin: 2px 0 0 20px;
   font-size: 18px;
 }
 
 .footer-names {
   display: inline-block;
   float: right;
-  margin: 10px 20px 0 0;
+  margin: 5px 20px 0 0;
 }
