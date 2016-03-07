@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
 
   def clear_null_session
     if session[:user_id]
-      session[:user_id] = nil if User.find(session[:user_id]).nil?
+      session[:user_id] = nil if User.where(id: session[:user_id]).blank?
     end
   end
 
