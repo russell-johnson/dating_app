@@ -1,19 +1,21 @@
-<%= form_for [@user, @address] do |f| %>
-  <%= f.label :street, class: 'form-label' %>
-  <br />
-  <%= f.text_field :street, autofocus: true %>
-  <br />
-  <%= f.label :city, class: 'form-label' %>
-  <br />
-  <%= f.text_field :city %>
-  <br />
-  <%= f.label :state, class: 'form-label' %>
-  <br />
-  <%= f.text_field :state %>
-  <br />
-  <%= f.label :zip, class: 'form-label' %>
-  <br />
-  <%= f.text_field :zip %>
-  <br />
-  <%= f.submit %>
-<% end %>
+<div class='form-for'>
+  <%= form_for [@user, @address] do |f| %>
+    <%= f.label :street, class: 'form-label' %>
+    <br />
+    <%= f.text_field :street, autofocus: true %>
+    <br />
+    <%= f.label :city, class: 'form-label' %>
+    <br />
+    <%= f.text_field :city %>
+    <br />
+    <%= f.label :state, class: 'form-label' %>
+    <br />
+    <%= f.text_field :state %>
+    <br />
+    <%= f.label :zip, class: 'form-label' %>
+    <br />
+    <%= f.text_field :zip %>
+    <br />
+    <%= f.submit :class => 'submit-btn' %>
+  <% end %>
+</div>

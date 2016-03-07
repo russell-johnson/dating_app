@@ -1,11 +1,13 @@
 <h1 class='center-title'><%= @user.name %>'s Interests</h1>
-<% @user.interests.each do |interest| %>
-  <p class='interest-name'><%= interest.name %></p>
-  <%= link_to 'Edit', edit_user_interest_path(@user, interest), class: 'interest-edit'%>
-  <%= link_to 'Delete', user_interest_path(@user, interest), method: :delete, data: {confirm: 'Are you sure?'}, class: 'interest-delete' %>
-<% end %>
-<br />
-<div class='margin-top'>
-  <%= link_to 'Add Interest', new_user_interest_path(@user), class: 'edit-link' %>
-  <%= link_to 'Profile', user_path(@user) %>
+<div class='interests'>
+  <% @user.interests.each do |interest| %>
+    <p class='interest-name'><%= interest.name %></p>
+    <%= link_to 'Edit', edit_user_interest_path(@user, interest), class: 'interest-edit'%>
+    <%= link_to 'Delete', user_interest_path(@user, interest), method: :delete, data: {confirm: 'Are you sure?'}, class: 'interest-delete' %>
+  <% end %>
+  <br />
+  <div class='margin-top'>
+    <%= link_to 'Add Interest', new_user_interest_path(@user), class: 'edit-link' %>
+    <%= link_to 'Profile', user_path(@user) %>
+  </div>
 </div>

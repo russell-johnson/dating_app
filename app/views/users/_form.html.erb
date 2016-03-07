@@ -1,31 +1,33 @@
-<%= form_for @user do |f| %>
-
-  <%= f.label :name, class: 'form-label' %>
-  <br />
-  <%= f.text_field :name, required: true, autofocus: true %>
-  <br />
-  <%= f.label :age, class: 'form-label' %>
-  <br />
-  <%= f.text_field :age %>
-  <br />
-  <%= f.label :email, class: 'form-label' %>
-  <br />
-  <%= f.text_field :email %>
-  <br />
-  <%= f.label :phone, class: 'form-label' %>
-  <br />
-  <%= f.text_field :phone %>
-  <br />
-  <%= f.label :race, class: 'form-label' %>
-  <br />
-  <%= f.text_field :race %>
-  <br />
-  <%= f.label :gender, class: 'form-label' %>
-  <br />
-  <%= f.select :gender, ['Male', 'Female'], required: true %>
-  <br />
-  <label>Profile Picture</label>
-  <%= f.file_field :avatar %>
-  <br />
-  <%= f.submit %>
-<% end %>
+<div class='form-for'>
+  <%= form_for @user do |f| %>
+    <%= f.label :name, class: 'form-label' %>
+    <br />
+    <%= f.text_field :name, required: true, autofocus: true %>
+    <br />
+    <%= f.label :age, class: 'form-label' %>
+    <br />
+    <%= f.text_field :age %>
+    <br />
+    <%= f.label :email, class: 'form-label' %>
+    <br />
+    <%= f.text_field :email %>
+    <br />
+    <%= f.label :phone, class: 'form-label' %>
+    <br />
+    <%= f.text_field :phone %>
+    <br />
+    <%= f.label :race, class: 'form-label' %>
+    <br />
+    <%= f.text_field :race %>
+    <br />
+    <%= f.label :gender, class: 'form-label' %>
+    <br />
+    <%= f.select :gender, ['Male', 'Female'], required: true %>
+    <br />
+    <label class='form-label'>Profile Picture</label>
+    <br />
+    <%= f.file_field :avatar %>
+    <br />
+    <%= f.submit :class => 'submit-btn' %>
+  <% end %>
+</div>

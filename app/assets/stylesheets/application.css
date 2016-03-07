@@ -87,6 +87,11 @@ a:hover {
   background-color: #ff907a;
 }
 
+.submit-btn {
+  margin: 20px 0 0 0;
+  background-color: #d5ff75;
+}
+
 .edit-link {
   background-color: #e5ff99;
 }
@@ -125,6 +130,10 @@ a:hover {
 .title {
   font-size: 30px;
   margin: 20px 0 20px 0;
+}
+
+.form-for {
+  margin-left: 20px;
 }
 
 /*===========================

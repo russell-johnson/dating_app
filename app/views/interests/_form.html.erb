@@ -1,11 +1,11 @@
 <div class='container'>
-  <div class='interest-form'>
+  <div class='form-for'>
     <%= form_for [@user, @interest] do |f| %>
       <%= f.label :name, class: 'name-label'%>
       <br />
       <%= f.text_field :name, required: true, autofocus: true %>
       <br />
-      <%= f.submit %>
+      <%= f.submit :class => 'submit-btn' %>
     <% end %>
   </div>
 </div>
