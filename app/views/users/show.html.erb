@@ -52,3 +52,5 @@
     <%= link_to 'Delete Profile', user_path, method: :delete, data: {confirm: 'Are you sure?'}, class: 'delete-link' %>
   </div>
 </div>
+
+<%= link_to 'Logout', logout_path(@user) %>

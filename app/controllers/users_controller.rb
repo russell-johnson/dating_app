@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
   before_action :user, except: [:show_males, :show_females, :index, :create, :new]
+  before_action :authorize
   def index
     @users = User.all
   end
 
   def show
-    @users= User.all
+    @user = current_user
   end
 
   def edit
@@ -27,7 +28,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to user_path(@user)
+      session[:user_id] = user.id
+      redirect_to user_path(current_user)
     else
       render :new
     end
@@ -65,7 +67,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :age, :gender, :email, :phone, :race, :avatar)
+    params.require(:user).permit(:name, :age, :gender, :email, :phone, :race, :avatar, :password, :password_confirmation)
   end
 
   def user

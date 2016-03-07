@@ -1,16 +1,19 @@
 <div class='form-for'>
   <%= form_for @user do |f| %>
-    <%= f.label :name, class: 'form-label' %>
+    <%= f.label :email, class: 'form-label' %>
+    <%= f.text_field :email %>
     <br />
+    <br />
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+    <%= f.label :name, class: 'form-label' %>
     <%= f.text_field :name, required: true, autofocus: true %>
     <br />
     <%= f.label :age, class: 'form-label' %>
     <br />
     <%= f.text_field :age %>
-    <br />
-    <%= f.label :email, class: 'form-label' %>
-    <br />
-    <%= f.text_field :email %>
     <br />
     <%= f.label :phone, class: 'form-label' %>
     <br />
