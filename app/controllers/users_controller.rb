@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :user, except: [:show_males, :show_females, :index, :create, :new]
-  before_action :authorize
+  before_action :authorize, only: :show
   def index
     @users = User.all
   end
