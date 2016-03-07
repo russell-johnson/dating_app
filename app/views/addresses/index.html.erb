@@ -16,7 +16,5 @@
     </div>
   <% end %>
 <% else %>
-  <h3>No current address!</h3>
-  <br />
   <%= link_to 'Add Address', new_user_address_path(@user), class: 'edit-link' %>
 <% end %>

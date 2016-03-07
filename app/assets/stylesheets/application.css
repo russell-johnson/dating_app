@@ -84,17 +84,25 @@ a {
 }
 
 a:hover {
-
+  color: red;
 }
 
 .edit-link {
-  color: black;
   background-color: #C8F463;
 }
 
+.edit-link:hover {
+  color: white;
+  text-shadow: 2px 1px black;
+}
+
 .delete-link {
-  color: black;
   background-color: #ff907a;
+}
+
+.delete-link:hover {
+  color: white;
+  text-shadow: 2px 1px black;
 }
 
 .margin-bottom {
