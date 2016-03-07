@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :user, except: [:index, :create, :new]
+  before_action :user, except: [:show_males, :show_females, :index, :create, :new]
   def index
     @users = User.all
   end
@@ -37,6 +37,30 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
+  def show_females
+    @users = User.all
+    @users.each do |user|
+      if user.gender == "Female"
+        @users = []
+        @users << user
+        @users
+      else
+      end
+    end
+  end
+
+  def show_males
+    @users = User.all
+    @users.each do |user|
+      if user.gender == "Male"
+        @users = []
+        @users << user
+        @users
+      else
+      end
+    end
+  end
+
   private
 
   def user_params
@@ -45,6 +69,5 @@ class UsersController < ApplicationController
 
   def user
     @user = User.find(params[:id])
-
   end
 end

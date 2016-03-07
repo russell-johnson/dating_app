@@ -43,5 +43,11 @@
       <%= link_to 'Delete Profile', user_path, method: :delete, data: {confirm: 'Are you sure?'}, class: 'delete-link' %>
     </div>
     <%= image_tag @user.avatar_url(:thumb), class: 'user-show-image' %>
+
+    <% if @user.gender == "Male" %>
+    <%= link_to "Show Matches", show_females_path %>
+    <% else %>
+    <%= link_to "Show Matches", show_males_path %>
+    <% end %>
   </div>
 </div>
