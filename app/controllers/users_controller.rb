@@ -39,11 +39,11 @@ class UsersController < ApplicationController
 
   def show_females
     @users = User.all
+    @female_users = []
     @users.each do |user|
       if user.gender == "Female"
-        @users = []
-        @users << user
-        @users
+       @female_users << user
+       @users = @female_users
       else
       end
     end
@@ -51,11 +51,11 @@ class UsersController < ApplicationController
 
   def show_males
     @users = User.all
+    @male_users = []
     @users.each do |user|
       if user.gender == "Male"
-        @users = []
-        @users << user
-        @users
+       @male_users << user
+       @users = @male_users
       else
       end
     end

@@ -3,7 +3,7 @@
     <%= form_for [@user, @interest] do |f| %>
       <%= f.label :name, class: 'name-label'%>
       <br />
-      <%= f.text_field :name, required: true %>
+      <%= f.text_field :name, required: true, autofocus: true %>
       <br />
       <%= f.submit %>
     <% end %>
