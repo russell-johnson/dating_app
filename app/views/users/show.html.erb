@@ -39,10 +39,14 @@
       <%= address.zip %>
       <% end %>
     <div class='edit-user-links'>
-      <%= link_to 'Edit', edit_user_path, class: 'edit-link' %>
+      <%= link_to 'Edit Profile', edit_user_path, class: 'edit-link' %>
       <%= link_to 'Delete Profile', user_path, method: :delete, data: {confirm: 'Are you sure?'}, class: 'delete-link' %>
     </div>
     <%= image_tag @user.avatar_url(:thumb), class: 'user-show-image' %>
-    <%= link_to "View Matches", users_path, class: 'view-matches' %>
+    <% if @user.gender == "Male" %>
+    <%= link_to "Show Matches", show_females_path, class: 'user-matches' %>
+    <% else %>
+    <%= link_to "Show Matches", show_males_path, class: 'user-matches' %>
+    <% end %>
   </div>
 </div>

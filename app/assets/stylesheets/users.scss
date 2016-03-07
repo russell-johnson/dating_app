@@ -67,11 +67,19 @@
   height: 400px;
 }
 
+<<<<<<< HEAD
 .view-matches {
   position: relative;
   display: inline-block;
   margin: 0 auto;
   top: -600px;
+=======
+.user-matches {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  top: -450px;
+>>>>>>> search
   left: 770px;
 }
 
@@ -83,10 +91,14 @@ User Avatar
   position: relative;
   display: block;
   margin: 0 auto;
-  top: -650px;
+  top: -500px;
+  height: 200px;
+  width: 200px;
 }
 
 .user-index-image {
+  height: 80px;
+  width: 80px;
   float: right;
   margin: 5px 15px 0 0;
 }

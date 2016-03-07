@@ -8,5 +8,7 @@ root 'shared#index'
     resources :bios
   end
 
+  get 'show_females', to: "users#show_females"
+  get 'show_males', to: "users#show_males"
 
 end

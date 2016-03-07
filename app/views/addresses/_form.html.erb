@@ -1,7 +1,7 @@
 <%= form_for [@user, @address] do |f| %>
   <%= f.label :street, class: 'form-label' %>
   <br />
-  <%= f.text_field :street %>
+  <%= f.text_field :street, autofocus: true %>
   <br />
   <%= f.label :city, class: 'form-label' %>
   <br />
