@@ -84,16 +84,15 @@ a {
 }
 
 a:hover {
-  color: red;
+  background-color: #ff907a;
 }
 
 .edit-link {
-  background-color: #C8F463;
+  background-color: #e5ff99;
 }
 
 .edit-link:hover {
-  color: white;
-  text-shadow: 2px 1px black;
+  background-color: #baf430;
 }
 
 .delete-link {
@@ -101,8 +100,7 @@ a:hover {
 }
 
 .delete-link:hover {
-  color: white;
-  text-shadow: 2px 1px black;
+ background-color: #f4593a;
 }
 
 .margin-bottom {
@@ -147,6 +145,7 @@ Navbar
 
 .navbar-link:hover {
   color: #d5ff75;
+  background-color: transparent;
 }
 
 .logo {

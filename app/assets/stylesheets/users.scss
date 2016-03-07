@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .show-user {
+  display: inline-block;
   margin-left: 10px;
   color: #F8F9E9;
 }
@@ -38,18 +39,14 @@
   width: 300px;
   background-color: #F8F9E9;
   border-radius: 10px;
-  margin: 5px;
+  margin:20px 5px 5px 20px;
 
 }
 
 .user-name {
+  text-align: center;
   background-color: transparent;
-  padding: 0;
   font-size: 24px;
-  float: left;
-  position: relative;
-  left: 30%;
-
 }
 
 .user-detail {
@@ -70,21 +67,38 @@
   position: relative;
   display: inline-block;
   margin: 0 auto;
-  top: -450px;
-  left: 770px;
+  left: 233px;
+  top: 40px;
+}
+
+.user-link-div {
+  display: inline-block;
+}
+
+.index-each-user {
+  background-color: transparent;
+}
+
+.index-each-user:hover {
+  background-color: transparent;
 }
 
 /*=============================
 User Avatar
 =============================*/
 
+.show-image-div {
+  float: right;
+  display: inline-block;
+}
+
 .user-show-image {
   position: relative;
-  display: block;
+  display: inline-block;
   margin: 0 auto;
-  top: -500px;
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
+  left: 450px;
 }
 
 .user-index-image {

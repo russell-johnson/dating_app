@@ -3,50 +3,52 @@
     <h1 class='center-title'><%= @user.name %>'s Profile</h1>
   </div>
   <div class="show-user">
+    <div class="show-image-div">
+      <%= image_tag @user.avatar_url(:thumb), class: 'user-show-image' %>
+      <% if @user.gender == "Male" %>
+      <%= link_to "Show Matches", show_females_path, class: 'user-matches' %>
+      <% else %>
+      <%= link_to "Show Matches", show_males_path, class: 'user-matches' %>
+      <% end %>
+    </div>
     <div class='user-link-div'>
       <%= link_to 'Address', user_addresses_path(@user), class: 'user-link' %>
       <%= link_to 'Interests', user_interests_path(@user), class: 'user-link' %>
       <%= link_to 'Bio', user_bios_path(@user), class: 'user-link' %>
     </div>
-    <h3 class='user-info-label'>Age: </h3><h3 class='user-info'><%= @user.age %></h3>
-    <h3 class='user-info-label'>Gender: </h3><h3 class='user-info'><%= @user.gender %></h3>
-    <h3 class='user-info-label'>Email: </h3><h3 class='user-info'><%= @user.email %></h3>
-    <h3 class='user-info-label'>Phone: </h3><h3 class='user-info'><%= @user.phone %></h3>
-    <h3 class='user-info-label'>Race: </h3><h3 class='user-info'><%= @user.race %></h3>
-    <br />
-    <% if @user.bios.any? %>
-      <% @user.bios.each do |bio| %>
-        <h3 class='user-info-label'>Bio: </h3>
-        <p class='bio-content'><%= bio.description %></p>
-        <% end %>
-    <% else %>
-    <h3 class='user-info-label'>Add Bio:</h3>
-    <% end %>
-    <br />
-    <h3 class='user-info-label'>Interests: </h3>
-      <% @user.interests.each do |i| %>
-      <p class='interests-content'><%= i.name %></p>
-    <% end %>
-    <br />
-    <h2 class='user-info-label'>Address:</h2>
-      <% @user.addresses.each do |address| %>
-      <%= address.street %>
-      <br />
-      <%= address.city %>
-      <br />
-      <%= address.state %>
-      <br />
-      <%= address.zip %>
+  <h3 class='user-info-label'>Age: </h3><h3 class='user-info'><%= @user.age %></h3>
+  <h3 class='user-info-label'>Gender: </h3><h3 class='user-info'><%= @user.gender %></h3>
+  <h3 class='user-info-label'>Email: </h3><h3 class='user-info'><%= @user.email %></h3>
+  <h3 class='user-info-label'>Phone: </h3><h3 class='user-info'><%= @user.phone %></h3>
+  <h3 class='user-info-label'>Race: </h3><h3 class='user-info'><%= @user.race %></h3>
+  <br />
+  <% if @user.bios.any? %>
+    <% @user.bios.each do |bio| %>
+      <h3 class='user-info-label'>Bio: </h3>
+      <p class='bio-content'><%= bio.description %></p>
       <% end %>
-    <div class='edit-user-links'>
-      <%= link_to 'Edit Profile', edit_user_path, class: 'edit-link' %>
-      <%= link_to 'Delete Profile', user_path, method: :delete, data: {confirm: 'Are you sure?'}, class: 'delete-link' %>
-    </div>
-    <%= image_tag @user.avatar_url(:thumb), class: 'user-show-image' %>
-    <% if @user.gender == "Male" %>
-    <%= link_to "Show Matches", show_females_path, class: 'user-matches' %>
-    <% else %>
-    <%= link_to "Show Matches", show_males_path, class: 'user-matches' %>
+  <% else %>
+    <h3 class='user-info-label'>Add Bio:</h3>
+  <% end %>
+  <br />
+  <h3 class='user-info-label'>Interests: </h3>
+    <% @user.interests.each do |i| %>
+    <p class='interests-content'><%= i.name %></p>
+  <% end %>
+  <br />
+  <h2 class='user-info-label'>Address:</h2>
+    <% @user.addresses.each do |address| %>
+    <%= address.street %>
+    <br />
+    <%= address.city %>
+    <br />
+    <%= address.state %>
+    <br />
+    <%= address.zip %>
     <% end %>
+  </div>
+  <div class='edit-user-links'>
+    <%= link_to 'Edit Profile', edit_user_path, class: 'edit-link' %>
+    <%= link_to 'Delete Profile', user_path, method: :delete, data: {confirm: 'Are you sure?'}, class: 'delete-link' %>
   </div>
 </div>

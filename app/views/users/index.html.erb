@@ -1,16 +1,18 @@
 <div class='container'>
   <h1 class='center-title'>All Profiles</h1>
   <% @users.each do |user| %>
-    <div class='list-user'>
-      <%= link_to user.name, user_path(user), class: 'user-name' %>
-      <br />
-      <div class='margin-bottom'></div>
-      <%= image_tag user.avatar_url(:tiny_thumb), class: 'user-index-image' %>
-      <p class='user-detail'>Age: <%= user.age %></p>
-      <p class='user-detail'><%= user.gender %></p>
-      <p class='user-detail'><%= user.race %></p>
-      <p class='user-detail'>P: <%= user.phone %></p>
-      <p class='user-detail'>E: <%= user.email %></p>
-    </div>
+    <%= link_to user_path(user), :class => "index-each-user" do %>
+      <div class='list-user'>
+        <p class='user-name'><%= user.name %></p>
+        <br />
+        <div class='margin-bottom'></div>
+        <%= image_tag user.avatar_url(:tiny_thumb), class: 'user-index-image' %>
+        <p class='user-detail'>Age: <%= user.age %></p>
+        <p class='user-detail'><%= user.gender %></p>
+        <p class='user-detail'><%= user.race %></p>
+        <p class='user-detail'>P: <%= user.phone %></p>
+        <p class='user-detail'>E: <%= user.email %></p>
+      </div>
+    <% end %>
   <% end %>
 </div>
