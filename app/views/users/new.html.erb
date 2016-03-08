@@ -1,4 +1,31 @@
 <h1 class='center-title'>Create Profile</h1>
 
-
-<%= render(partial: 'form') %>
+<div class='form-for'>
+  <%= form_for :user do |f| %>
+    <%= f.label :email, class: 'form-label' %>
+    <br />
+    <%= f.text_field :email, autofocus: true %>
+    <br />
+    <%= f.label :password, class: 'form-label' %>
+    <br />
+    <%= f.password_field :password %>
+    <br />
+    <%= f.label :password_confirmation, class: 'form-label' %>
+    <br />
+    <%= f.password_field :password_confirmation %>
+    <br />
+    <%= f.label :name, class: 'form-label' %>
+    <br />
+    <%= f.text_field :name, required: true %>
+    <br />
+    <%= f.label :gender, class: 'form-label' %>
+    <br />
+    <%= f.select :gender, ['Male', 'Female'], required: true %>
+    <br />
+    <label class='form-label'>Profile Picture</label>
+    <br />
+    <%= f.file_field :avatar %>
+    <br />
+    <%= f.submit :class => 'submit-btn' %>
+  <% end %>
+</div>

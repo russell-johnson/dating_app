@@ -12,7 +12,7 @@
   display: inline-block;
   float: left;
   clear: both;
-  margin: -240px 0 0 20px;
+  margin: -340px 0 0 20px;
 }
 
 .user-info {
@@ -128,6 +128,15 @@ User Avatar
   position: relative;
   float: left;
   left: 45%;
+  clear: both;
+  margin-top: 20px;
+}
+
+.upload-avatar {
+  display: inline-block;
+  position: relative;
+  float: left;
+  left: 44%;
   clear: both;
   margin-top: 20px;
 }

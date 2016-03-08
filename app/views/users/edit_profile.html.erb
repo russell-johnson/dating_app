@@ -6,6 +6,15 @@
     <div class="show-image-div">
       <%= image_tag @user.avatar_url(:thumb), class: 'user-show-image' %>
     </div>
+    <div class='upload-avatar'>
+      <%= form_for :user do |f| %>
+        <label class='form-label'>Profile Picture</label>
+        <br />
+        <%= f.file_field :avatar %>
+        <br />
+        <%= f.submit %>
+      <% end %>
+    </div>
     <div class='info-div'>
       <h3 class='info'>Info</h3>
       <h3 class='user-info-label'>Age: </h3><h3 class='user-info'><%= @user.age %></h3>

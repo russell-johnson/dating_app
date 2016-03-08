@@ -2,7 +2,7 @@
   <%= form_for :user do |f| %>
     <%= f.label :email, class: 'form-label' %>
     <br />
-    <%= f.text_field :email %>
+    <%= f.text_field :email, autofocus: true %>
     <br />
     <%= f.label :password, class: 'form-label' %>
     <br />
@@ -14,7 +14,7 @@
     <br />
     <%= f.label :name, class: 'form-label' %>
     <br />
-    <%= f.text_field :name, required: true, autofocus: true %>
+    <%= f.text_field :name, required: true %>
     <br />
     <%= f.label :age, class: 'form-label' %>
     <br />
@@ -32,10 +32,7 @@
     <br />
     <%= f.select :gender, ['Male', 'Female'], required: true %>
     <br />
-    <label class='form-label'>Profile Picture</label>
-    <br />
-    <%= f.file_field :avatar %>
-    <br />
+  
     <%= f.submit :class => 'submit-btn' %>
   <% end %>
 </div>
