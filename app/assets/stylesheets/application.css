@@ -121,7 +121,7 @@ a:hover {
 }
 
 .margin-right {
-  margin-right: 30px;
+  margin-right: 60px;
 }
 
 .center-title {
@@ -145,16 +145,16 @@ Navbar
 ===========================*/
 
 .navbar {
-  height: 30px;
+  height: 35px;
   background-color: #303030;
 }
 
 .navbar-link {
   float: right;
   display: inline-block;
-  margin: 3px 20px 0 0;
+  margin: 6px 10px 0 0;
   background-color: transparent;
-  color: white;
+  color: #ff907a;
 }
 
 .navbar-link:hover {
@@ -162,10 +162,20 @@ Navbar
   background-color: transparent;
 }
 
+.navbar-user-link {
+  background-color: transparent;
+  color: #ff907a;
+}
+
+.navbar-user-link:hover {
+  color: #d5ff75;
+  background-color: transparent;
+}
+
 .logo {
   font-size: 24px;
   display: inline-block;
-  margin: 4px 5px 0 5px;
+  margin: 6px 5px 0 5px;
   font-weight: bold;
 }
 
