@@ -13,7 +13,7 @@ class BiosController < ApplicationController
   def create
     @bio = @user.bios.new(bio_params)
     if @bio.save
-      redirect_to user_path(@user)
+      redirect_to profile_edit_path(current_user)
     else
       render :new
     end
@@ -27,7 +27,7 @@ class BiosController < ApplicationController
 
   def update
     if @bio.update(bio_params)
-      redirect_to user_path(@user)
+      redirect_to profile_edit_path(current_user)
     else
       render :edit
     end

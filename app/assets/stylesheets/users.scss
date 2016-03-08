@@ -3,9 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .show-user {
-  display: inline-block;
-  margin-left: 10px;
+  background-color: white;
+  width: 100%;
+  margin-top: 40px;
   color: #F8F9E9;
+}
+
+.info-div {
+  display: inline-block;
+  float: left;
+  clear: both;
+  margin: -240px 0 0 20px;
 }
 
 .user-info {
@@ -26,10 +34,12 @@
 }
 
 .user-link-div {
+  display: inline-block;
   margin: 80px 0 20px 0;
 }
 
 .edit-user-links {
+
   margin: 80px 0 20px 0;
 }
 
@@ -61,16 +71,17 @@
   padding: 0;
 }
 
+.info {
+  color: #F8F9E9;
+  font-style: italic;
+  font-size: 32px;
+  margin-bottom: 15px;
+  text-decoration: underline;
+}
+
 .bio-text-area {
   width: 400px;
   height: 400px;
-}
-.user-matches {
-  position: relative;
-  display: inline-block;
-  margin: 0 auto;
-  left: 233px;
-  top: 40px;
 }
 
 .user-link-div {
@@ -90,17 +101,16 @@ User Avatar
 =============================*/
 
 .show-image-div {
-  float: right;
   display: inline-block;
+  position: relative;
+  float: left;
+  left: 40%;
+  clear: both;
 }
 
 .user-show-image {
-  position: relative;
-  display: inline-block;
-  margin: 0 auto;
   height: 300px;
   width: 300px;
-  left: 450px;
 }
 
 .user-index-image {
@@ -108,4 +118,17 @@ User Avatar
   width: 80px;
   float: right;
   margin: 5px 15px 0 0;
+}
+
+.user-matches {
+
+}
+
+.user-matches-div {
+  display: inline-block;
+  position: relative;
+  float: left;
+  left: 45%;
+  clear: both;
+  margin-top: 20px;
 }

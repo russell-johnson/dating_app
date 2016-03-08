@@ -1,8 +1,16 @@
 class UsersController < ApplicationController
-  before_action :authorize, only: [:show, :update, :destroy]
+  before_action :authorize, only: [:edit, :update, :destroy, :profile, :edit_profile]
 
   def index
     @users = User.all
+  end
+
+  def profile
+    @user = current_user
+  end
+
+  def edit_profile
+    @user = current_user
   end
 
   def show
@@ -10,12 +18,12 @@ class UsersController < ApplicationController
   end
 
   def edit
-
+    @user = current_user
   end
 
   def update
     if current_user.update(user_params)
-      redirect_to user_path
+      redirect_to profile_edit_path(current_user)
     else
       render :edit
     end
@@ -29,7 +37,7 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     if user.save
       session[:user_id] = user.id
-      redirect_to user_path(current_user)
+      redirect_to profile_path(current_user)
     else
       render :new
     end

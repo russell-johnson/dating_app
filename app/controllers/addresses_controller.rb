@@ -15,7 +15,7 @@ class AddressesController < ApplicationController
   def update
     @address = Address.find(params[:id])
     if @address.update(address_params)
-      redirect_to user_addresses_path(@user)
+      redirect_to profile_edit_path(current_user)
     else
       render :edit
     end
@@ -28,7 +28,7 @@ class AddressesController < ApplicationController
   def create
     @address = @user.addresses.new(address_params)
     if @user.save
-      redirect_to user_path(@user)
+      redirect_to profile_edit_path(current_user)
     else
       render :new
     end

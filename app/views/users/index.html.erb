@@ -1,7 +1,9 @@
 <div class='container'>
   <h1 class='center-title'>All Profiles</h1>
+
   <% @users.each do |user| %>
-    <%= link_to user_path(user), :class => "index-each-user" do %>
+
+      <%= link_to user_path(user), :class => "index-each-user" do %>
       <div class='list-user'>
         <p class='user-name'><%= user.name %></p>
         <br />
